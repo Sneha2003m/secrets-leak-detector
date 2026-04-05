@@ -1,0 +1,19 @@
+title = "Secrets Leak Detector"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "hardcoded-db-password"
+description = "Hardcoded database password"
+regex = '''(?i)(db_password|db_pass)\s*=\s*[^\s]{6,}'''
+tags = ["custom", "database"]
+
+[[rules]]
+id = "jwt-secret"
+description = "Hardcoded JWT secret"
+regex = '''(?i)(jwt_secret|jwt_key)\s*=\s*[^\s]{10,}'''
+tags = ["custom", "jwt"]
+
+[allowlist]
+paths = [".gitleaks.toml", "README.md"]

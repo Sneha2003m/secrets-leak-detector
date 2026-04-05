@@ -1,0 +1,15 @@
+.env
+.env.local
+*.pem
+*.key
+id_rsa
+*.secret
+__pycache__/
+*.pyc
+node_modules/
+.idea/
+.vscode/
+*.log
+gitleaks-report.*
+gitleaks_8.18.2_windows_x64/
+gitleaks_8.18.2_windows_x64.zip
